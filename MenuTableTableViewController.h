@@ -1,5 +1,5 @@
 //
-//  MenuTableViewController.h
+//  MenuTableTableViewController.h
 //  StackOverEasyBrowser
 //
 //  Created by Rodrigo Carballo on 2/16/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuTableViewController : UIViewController
+@interface MenuTableTableViewController : UITableViewController
 
 @end
