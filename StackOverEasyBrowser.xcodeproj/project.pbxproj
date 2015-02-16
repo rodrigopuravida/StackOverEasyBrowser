@@ -17,6 +17,7 @@
 		487C79BA1A9293450018F3A8 /* StackOverEasyBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C79B91A9293450018F3A8 /* StackOverEasyBrowserTests.m */; };
 		487C79C41A9295CE0018F3A8 /* Tasks in Resources */ = {isa = PBXBuildFile; fileRef = 487C79C31A9295CE0018F3A8 /* Tasks */; };
 		487C79C71A9297840018F3A8 /* BurgerContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C79C61A9297840018F3A8 /* BurgerContainerController.m */; };
+		487C79CA1A92984E0018F3A8 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C79C91A92984E0018F3A8 /* MenuTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		487C79C31A9295CE0018F3A8 /* Tasks */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tasks; sourceTree = "<group>"; };
 		487C79C51A9297840018F3A8 /* BurgerContainerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurgerContainerController.h; sourceTree = "<group>"; };
 		487C79C61A9297840018F3A8 /* BurgerContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerContainerController.m; sourceTree = "<group>"; };
+		487C79C81A92984E0018F3A8 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		487C79C91A92984E0018F3A8 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				487C79A41A9293440018F3A8 /* ViewController.h */,
 				487C79A51A9293440018F3A8 /* ViewController.m */,
 				487C79A71A9293440018F3A8 /* Main.storyboard */,
+				487C79C81A92984E0018F3A8 /* MenuTableViewController.h */,
+				487C79C91A92984E0018F3A8 /* MenuTableViewController.m */,
 				487C79C51A9297840018F3A8 /* BurgerContainerController.h */,
 				487C79C61A9297840018F3A8 /* BurgerContainerController.m */,
 				487C79AA1A9293440018F3A8 /* Images.xcassets */,
@@ -235,6 +240,7 @@
 				487C79A31A9293440018F3A8 /* StackOverEasyBrowser.xcdatamodeld in Sources */,
 				487C79A01A9293440018F3A8 /* AppDelegate.m in Sources */,
 				487C79A61A9293440018F3A8 /* ViewController.m in Sources */,
+				487C79CA1A92984E0018F3A8 /* MenuTableViewController.m in Sources */,
 				487C799D1A9293440018F3A8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
