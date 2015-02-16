@@ -18,6 +18,7 @@
 		487C79C41A9295CE0018F3A8 /* Tasks in Resources */ = {isa = PBXBuildFile; fileRef = 487C79C31A9295CE0018F3A8 /* Tasks */; };
 		487C79C71A9297840018F3A8 /* BurgerContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C79C61A9297840018F3A8 /* BurgerContainerController.m */; };
 		487C79CD1A929E410018F3A8 /* MenuTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C79CC1A929E410018F3A8 /* MenuTableTableViewController.m */; };
+		48E46C231A92A66E007ED50A /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = 48E46C221A92A66E007ED50A /* burger.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +49,9 @@
 		487C79C31A9295CE0018F3A8 /* Tasks */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tasks; sourceTree = "<group>"; };
 		487C79C51A9297840018F3A8 /* BurgerContainerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurgerContainerController.h; sourceTree = "<group>"; };
 		487C79C61A9297840018F3A8 /* BurgerContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerContainerController.m; sourceTree = "<group>"; };
-		487C79CB1A929E410018F3A8 /* MenuTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableTableViewController.h; sourceTree = "<group>"; };
-		487C79CC1A929E410018F3A8 /* MenuTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableTableViewController.m; sourceTree = "<group>"; };
+		487C79CB1A929E410018F3A8 /* MenuTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableTableViewController.h; path = ../MenuTableTableViewController.h; sourceTree = "<group>"; };
+		487C79CC1A929E410018F3A8 /* MenuTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableTableViewController.m; path = ../MenuTableTableViewController.m; sourceTree = "<group>"; };
+		48E46C221A92A66E007ED50A /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +75,6 @@
 		487C798E1A9293440018F3A8 = {
 			isa = PBXGroup;
 			children = (
-				487C79CB1A929E410018F3A8 /* MenuTableTableViewController.h */,
-				487C79CC1A929E410018F3A8 /* MenuTableTableViewController.m */,
 				487C79991A9293440018F3A8 /* StackOverEasyBrowser */,
 				487C79B61A9293450018F3A8 /* StackOverEasyBrowserTests */,
 				487C79981A9293440018F3A8 /* Products */,
@@ -96,12 +96,15 @@
 				487C799E1A9293440018F3A8 /* AppDelegate.h */,
 				487C79C31A9295CE0018F3A8 /* Tasks */,
 				487C799F1A9293440018F3A8 /* AppDelegate.m */,
+				487C79CB1A929E410018F3A8 /* MenuTableTableViewController.h */,
+				487C79CC1A929E410018F3A8 /* MenuTableTableViewController.m */,
 				487C79A41A9293440018F3A8 /* ViewController.h */,
 				487C79A51A9293440018F3A8 /* ViewController.m */,
 				487C79A71A9293440018F3A8 /* Main.storyboard */,
 				487C79C51A9297840018F3A8 /* BurgerContainerController.h */,
 				487C79C61A9297840018F3A8 /* BurgerContainerController.m */,
 				487C79AA1A9293440018F3A8 /* Images.xcassets */,
+				48E46C221A92A66E007ED50A /* burger.png */,
 				487C79AC1A9293440018F3A8 /* LaunchScreen.xib */,
 				487C79A11A9293440018F3A8 /* StackOverEasyBrowser.xcdatamodeld */,
 				487C799A1A9293440018F3A8 /* Supporting Files */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				487C79A91A9293440018F3A8 /* Main.storyboard in Resources */,
+				48E46C231A92A66E007ED50A /* burger.png in Resources */,
 				487C79AE1A9293440018F3A8 /* LaunchScreen.xib in Resources */,
 				487C79AB1A9293440018F3A8 /* Images.xcassets in Resources */,
 				487C79C41A9295CE0018F3A8 /* Tasks in Resources */,
@@ -434,6 +438,7 @@
 				487C79BF1A9293450018F3A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		487C79C01A9293450018F3A8 /* Build configuration list for PBXNativeTarget "StackOverEasyBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +447,7 @@
 				487C79C21A9293450018F3A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
