@@ -81,14 +81,12 @@
             [self.topViewController.view removeGestureRecognizer:self.tapToClose];
         }
     }
-    
 }
 
 -(void)closePanel{
     NSLog(@"Closing Panel");
     
     [self.topViewController.view removeGestureRecognizer:self.tapToClose];
-    
     
     __weak BurgerContainerController *weakSelf = self;
     
