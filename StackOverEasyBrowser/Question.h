@@ -13,7 +13,7 @@
 +(NSArray *)questionsFromJSON:(NSData *)jsonData;
 
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *avatarUrl;
+@property (strong, nonatomic) NSString *avatarURL;
 @property (strong, nonatomic) UIImage *image;
 
 @end
