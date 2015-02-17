@@ -29,6 +29,9 @@
     self.searchVC.view.frame = self.view.frame;
     [self.view addSubview:self.searchVC.view];
     [self.searchVC didMoveToParentViewController:self];
+    self.topViewController = self.searchVC;
+
+    
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(15, 15, 50, 50)];
     [button setBackgroundImage:[UIImage imageNamed:@"burger"] forState:UIControlStateNormal];
@@ -47,16 +50,67 @@
 
 -(void)slidePanel:(id)sender{
     NSLog(@"Sliding Panel");
+    UIPanGestureRecognizer *pan= (UIPanGestureRecognizer *)sender;
+    
+    CGPoint translatedPoint = [pan translationInView:self.view];
+    CGPoint velocity = [pan velocityInView:self.view];
+    
+    if ([pan state] == UIGestureRecognizerStateChanged) {
+        if (velocity.x > 0 || self.topViewController.view.frame.origin.x > 0) {
+            self.topViewController.view.center = CGPointMake(self.topViewController.view.center.x + translatedPoint.x, self.topViewController.view.center.y);
+            [pan setTranslation:CGPointZero inView:self.view];
+        }
+    }
+    if ([pan state] == UIGestureRecognizerStateEnded) {
+        
+        __weak BurgerContainerController *weakSelf = self;
+        
+        if (self.topViewController.view.frame.origin.x > self.view.frame.size.width / 3) {
+            NSLog(@"they meant to open it");
+            self.burgerButton.userInteractionEnabled = false;
+            [UIView animateWithDuration:0.3 animations:^{
+                self.topViewController.view.center = CGPointMake(weakSelf.view.frame.size.width * 1.25, weakSelf.topViewController.view.center.y);
+            } completion:^(BOOL finished) {
+                [weakSelf.topViewController.view addGestureRecognizer:weakSelf.tapToClose];
+            }];
+        }
+        else {
+            [UIView animateWithDuration:0.2 animations:^{
+                weakSelf.topViewController.view.center = weakSelf.view.center;
+            }];
+            [self.topViewController.view removeGestureRecognizer:self.tapToClose];
+        }
+    }
     
 }
 
 -(void)closePanel{
     NSLog(@"Closing Panel");
+    
+    [self.topViewController.view removeGestureRecognizer:self.tapToClose];
+    
+    
+    __weak BurgerContainerController *weakSelf = self;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        weakSelf.topViewController.view.center = weakSelf.view.center;
+    } completion:^(BOOL finished) {
+        weakSelf.burgerButton.userInteractionEnabled = true;
+    }];
+    
 }
 
 -(void) burgerButtonPressed {
     NSLog(@"Burger ready to go");
+    self.burgerButton.userInteractionEnabled = false;
     
+    __weak BurgerContainerController *weakSelf = self;
+    
+    [UIView animateWithDuration:.3 animations:^{
+        weakSelf.topViewController.view.center =CGPointMake(weakSelf.topViewController.view.center.x + 300, weakSelf.topViewController.view.center.y);
+    }completion:^(BOOL finished) {
+        [weakSelf.topViewController.view addGestureRecognizer:weakSelf.tapToClose];
+    }];
 }
 
 -(UINavigationController *)searchVC {
