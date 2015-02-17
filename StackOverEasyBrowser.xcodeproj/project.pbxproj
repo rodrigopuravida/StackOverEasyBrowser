@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		485B57731A93E68200AFE40D /* SearchQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485B57721A93E68200AFE40D /* SearchQuestionsViewController.m */; };
 		487C799D1A9293440018F3A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C799C1A9293440018F3A8 /* main.m */; };
 		487C79A01A9293440018F3A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C799F1A9293440018F3A8 /* AppDelegate.m */; };
 		487C79A31A9293440018F3A8 /* StackOverEasyBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 487C79A11A9293440018F3A8 /* StackOverEasyBrowser.xcdatamodeld */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		485B57711A93E68200AFE40D /* SearchQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchQuestionsViewController.h; sourceTree = "<group>"; };
+		485B57721A93E68200AFE40D /* SearchQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchQuestionsViewController.m; sourceTree = "<group>"; };
 		487C79971A9293440018F3A8 /* StackOverEasyBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverEasyBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487C799B1A9293440018F3A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		487C799C1A9293440018F3A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 				487C79A41A9293440018F3A8 /* ViewController.h */,
 				487C79A51A9293440018F3A8 /* ViewController.m */,
 				487C79A71A9293440018F3A8 /* Main.storyboard */,
+				485B57711A93E68200AFE40D /* SearchQuestionsViewController.h */,
+				485B57721A93E68200AFE40D /* SearchQuestionsViewController.m */,
 				487C79C51A9297840018F3A8 /* BurgerContainerController.h */,
 				487C79C61A9297840018F3A8 /* BurgerContainerController.m */,
 				487C79AA1A9293440018F3A8 /* Images.xcassets */,
@@ -247,6 +252,7 @@
 			files = (
 				48E46C261A92B0F4007ED50A /* WebOAuthViewController.m in Sources */,
 				487C79C71A9297840018F3A8 /* BurgerContainerController.m in Sources */,
+				485B57731A93E68200AFE40D /* SearchQuestionsViewController.m in Sources */,
 				487C79CD1A929E410018F3A8 /* MenuTableTableViewController.m in Sources */,
 				487C79A31A9293440018F3A8 /* StackOverEasyBrowser.xcdatamodeld in Sources */,
 				487C79A01A9293440018F3A8 /* AppDelegate.m in Sources */,
