@@ -140,8 +140,9 @@
                                                 </textView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="JIP-6e-Q8B" firstAttribute="trailing" secondItem="vgR-JB-c2q" secondAttribute="trailingMargin" id="429-kz-WSe"/>
                                                 <constraint firstItem="JIP-6e-Q8B" firstAttribute="top" secondItem="R5U-lk-srP" secondAttribute="top" id="AMD-nm-iIW"/>
-                                                <constraint firstItem="JIP-6e-Q8B" firstAttribute="leading" secondItem="R5U-lk-srP" secondAttribute="trailing" constant="8" id="H1i-Ci-Atp"/>
+                                                <constraint firstItem="JIP-6e-Q8B" firstAttribute="leading" secondItem="R5U-lk-srP" secondAttribute="trailing" constant="3" id="H1i-Ci-Atp"/>
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="R5U-lk-srP" secondAttribute="bottom" constant="14" id="ydZ-es-nFr"/>
                                             </constraints>
                                         </tableViewCellContentView>
