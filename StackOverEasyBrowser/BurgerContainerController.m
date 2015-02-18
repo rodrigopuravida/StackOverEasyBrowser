@@ -10,7 +10,7 @@
 #import "ProfileViewController.h"
 #import "MenuTableTableViewController.h"
 
-@interface BurgerContainerController ()
+@interface BurgerContainerController () <MenuPressedDelegate>
 
 @property (strong,nonatomic) UINavigationController *searchVC;
 @property (strong,nonatomic) UIViewController *topViewController;
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation BurgerContainerController <MenuPressedDelegate>
+@implementation BurgerContainerController
 
 NSInteger const slideRightBuffer = 300;
 
@@ -130,6 +130,35 @@ NSInteger const slideRightBuffer = 300;
     return _profileVC;
 }
 
+-(void)switchToViewController:(UIViewController *)destinationVC {
+    
+    __weak BurgerContainerController *weakSelf = self;
+    [UIView animateWithDuration:0.2 animations:^{
+        
+        weakSelf.topViewController.view.frame = CGRectMake(weakSelf.view.frame.size.width, 0, weakSelf.view.frame.size.width, weakSelf.view.frame.size.height);
+    } completion:^(BOOL finished) {
+        
+        destinationVC.view.frame = self.topViewController.view.frame;
+        
+        [self.topViewController.view removeGestureRecognizer:self.slideRecognizer];
+        [self.burgerButton removeFromSuperview];
+        [self.topViewController willMoveToParentViewController:nil];
+        [self.topViewController.view removeFromSuperview];
+        [self.topViewController removeFromParentViewController];
+        
+        self.topViewController = destinationVC;
+        
+        [self addChildViewController:self.topViewController];
+        [self.view addSubview:self.topViewController.view];
+        [self.topViewController didMoveToParentViewController:self];
+        [self.topViewController.view addSubview:self.burgerButton];
+        [self.topViewController.view addGestureRecognizer:self.slideRecognizer];
+        
+        [self closePanel];
+    } ];
+    
+}
+
 -(void)menuOptionSelected:(NSInteger)selectedRow {
     NSLog(@"%ld",(long)selectedRow);
     if (self.selectedRow == selectedRow) {
@@ -156,7 +185,7 @@ NSInteger const slideRightBuffer = 300;
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     if ([segue.identifier isEqualToString:@"EMBED_MENU"]) {
-        MenuTableViewController *destinationVC = segue.destinationViewController;
+        MenuTableTableViewController *destinationVC = segue.destinationViewController;
         destinationVC.delegate = self;
         self.menuVC = destinationVC;
         

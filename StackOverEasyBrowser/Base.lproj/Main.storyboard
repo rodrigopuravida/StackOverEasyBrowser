@@ -61,7 +61,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rAq-RD-We9" id="yJx-ed-q6c">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Questions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OB7-EQ-fiV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OB7-EQ-fiV">
                                                     <rect key="frame" x="19" y="11" width="289" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -75,7 +75,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pkx-ZA-4Ah" id="S8D-P0-Hvh">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqu-0y-hHu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Questions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqu-0y-hHu">
                                                     <rect key="frame" x="21" y="11" width="360" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -124,16 +124,19 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n1L-i9-b4p" id="vgR-JB-c2q">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R5U-lk-srP">
-                                                    <rect key="frame" x="21" y="8" width="70" height="70"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R5U-lk-srP">
+                                                    <rect key="frame" x="16" y="8" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="DIZ-6w-Rhy"/>
                                                         <constraint firstAttribute="height" constant="70" id="qLC-Wm-Ja2"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIP-6e-Q8B">
-                                                    <rect key="frame" x="94" y="8" width="498" height="70"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIP-6e-Q8B">
+                                                    <rect key="frame" x="94" y="8" width="498" height="84"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="84" id="9h8-sD-VTS"/>
+                                                    </constraints>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -142,7 +145,8 @@
                                             <constraints>
                                                 <constraint firstItem="JIP-6e-Q8B" firstAttribute="trailing" secondItem="vgR-JB-c2q" secondAttribute="trailingMargin" id="429-kz-WSe"/>
                                                 <constraint firstItem="JIP-6e-Q8B" firstAttribute="top" secondItem="R5U-lk-srP" secondAttribute="top" id="AMD-nm-iIW"/>
-                                                <constraint firstItem="JIP-6e-Q8B" firstAttribute="leading" secondItem="R5U-lk-srP" secondAttribute="trailing" constant="3" id="H1i-Ci-Atp"/>
+                                                <constraint firstItem="JIP-6e-Q8B" firstAttribute="leading" secondItem="R5U-lk-srP" secondAttribute="trailing" constant="8" id="H1i-Ci-Atp"/>
+                                                <constraint firstItem="R5U-lk-srP" firstAttribute="leading" secondItem="vgR-JB-c2q" secondAttribute="leadingMargin" constant="8" id="bxx-Ay-IdK"/>
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="R5U-lk-srP" secondAttribute="bottom" constant="14" id="ydZ-es-nFr"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -193,7 +197,7 @@
         <!--Profile View Controller-->
         <scene sceneID="t2o-fB-YFN">
             <objects>
-                <viewController id="QJB-Gg-jn7" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PROFILE_VC" id="QJB-Gg-jn7" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3QG-EK-u3P"/>
                         <viewControllerLayoutGuide type="bottom" id="2AV-FN-GdC"/>
@@ -201,8 +205,54 @@
                     <view key="view" contentMode="scaleToFill" id="SpS-xT-eX2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="e6q-xA-IcY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="153" id="mmy-5g-OLY" customClass="ProfileCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mmy-5g-OLY" id="ciz-5i-Myx">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOG-J3-PFz">
+                                                    <rect key="frame" x="20" y="8" width="251.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekq-sh-pDO">
+                                                    <rect key="frame" x="20" y="59" width="360" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SOG-J3-PFz" firstAttribute="top" secondItem="ciz-5i-Myx" secondAttribute="topMargin" id="Anf-Ca-w7D"/>
+                                                <constraint firstItem="Ekq-sh-pDO" firstAttribute="top" secondItem="SOG-J3-PFz" secondAttribute="bottom" constant="31" id="myR-AP-wex"/>
+                                                <constraint firstItem="Ekq-sh-pDO" firstAttribute="leading" secondItem="ciz-5i-Myx" secondAttribute="leadingMargin" constant="12" id="udL-Yu-Rbd"/>
+                                                <constraint firstItem="SOG-J3-PFz" firstAttribute="leading" secondItem="ciz-5i-Myx" secondAttribute="leadingMargin" constant="12" id="xyL-xJ-a2t"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userId" destination="SOG-J3-PFz" id="vwR-EA-cf4"/>
+                                            <outlet property="userName" destination="Ekq-sh-pDO" id="vyz-e4-mZz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.16078431904315948" green="0.89803928136825562" blue="0.18431372940540314" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="2AV-FN-GdC" firstAttribute="top" secondItem="e6q-xA-IcY" secondAttribute="bottom" id="6an-s3-LUl"/>
+                            <constraint firstItem="e6q-xA-IcY" firstAttribute="top" secondItem="SpS-xT-eX2" secondAttribute="topMargin" id="JfR-9O-INY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e6q-xA-IcY" secondAttribute="trailing" constant="-16" id="gO8-FT-VMZ"/>
+                            <constraint firstItem="e6q-xA-IcY" firstAttribute="leading" secondItem="SpS-xT-eX2" secondAttribute="leadingMargin" constant="-16" id="oBd-UL-KyX"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eFi-OZ-YnE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djS-MW-U8U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
