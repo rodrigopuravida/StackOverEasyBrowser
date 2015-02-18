@@ -7,9 +7,11 @@
 //
 
 #import "ProfileViewController.h"
+#import "ProfileCell.h"
 
-@interface ProfileViewController () <UIScrollViewDelegate>
+@interface ProfileViewController () <UIScrollViewDelegate, UITableViewDataSource>
 @property (retain,nonatomic) UIScrollView *scrollView;
+@property (retain, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -17,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.scrollView = [[UIScrollView alloc]
                        initWithFrame:self.view.frame];
     //self.scrollView.backgroundColor = [UIColor blueColor];
@@ -37,6 +40,17 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"x:%f y:%f",scrollView.contentOffset.x,scrollView.contentOffset.y);
 }
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PROFILE_CEL"
+                                                         forIndexPath:indexPath];
+        return cell;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -13,6 +13,7 @@
 		485B577F1A93F8E800AFE40D /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485B577E1A93F8E800AFE40D /* QuestionCell.m */; };
 		485B57821A953BC300AFE40D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485B57811A953BC300AFE40D /* ProfileViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		485B57861A9553C300AFE40D /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485B57851A9553C300AFE40D /* ProfileCell.m */; };
+		485B57891A95579A00AFE40D /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 485B57881A95579A00AFE40D /* Profile.m */; };
 		487C799D1A9293440018F3A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C799C1A9293440018F3A8 /* main.m */; };
 		487C79A01A9293440018F3A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C799F1A9293440018F3A8 /* AppDelegate.m */; };
 		487C79A31A9293440018F3A8 /* StackOverEasyBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 487C79A11A9293440018F3A8 /* StackOverEasyBrowser.xcdatamodeld */; };
@@ -52,6 +53,8 @@
 		485B57831A953F1000AFE40D /* MenuPressedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPressedDelegate.h; sourceTree = "<group>"; };
 		485B57841A9553C300AFE40D /* ProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCell.h; sourceTree = "<group>"; };
 		485B57851A9553C300AFE40D /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
+		485B57871A95579A00AFE40D /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		485B57881A95579A00AFE40D /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		487C79971A9293440018F3A8 /* StackOverEasyBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverEasyBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487C799B1A9293440018F3A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		487C799C1A9293440018F3A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				485B57751A93EB5600AFE40D /* StackOverflowService.m */,
 				485B57771A93ED5A00AFE40D /* Question.h */,
 				485B57781A93ED5A00AFE40D /* Question.m */,
+				485B57871A95579A00AFE40D /* Profile.h */,
+				485B57881A95579A00AFE40D /* Profile.m */,
 				487C79C51A9297840018F3A8 /* BurgerContainerController.h */,
 				487C79C61A9297840018F3A8 /* BurgerContainerController.m */,
 				485B57831A953F1000AFE40D /* MenuPressedDelegate.h */,
@@ -282,6 +287,7 @@
 				485B57731A93E68200AFE40D /* SearchQuestionsViewController.m in Sources */,
 				487C79CD1A929E410018F3A8 /* MenuTableTableViewController.m in Sources */,
 				487C79A31A9293440018F3A8 /* StackOverEasyBrowser.xcdatamodeld in Sources */,
+				485B57891A95579A00AFE40D /* Profile.m in Sources */,
 				487C79A01A9293440018F3A8 /* AppDelegate.m in Sources */,
 				485B577F1A93F8E800AFE40D /* QuestionCell.m in Sources */,
 				487C79A61A9293440018F3A8 /* ViewController.m in Sources */,
