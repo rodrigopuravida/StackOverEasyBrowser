@@ -23,7 +23,9 @@
 
 @end
 
-@implementation BurgerContainerController
+@implementation BurgerContainerController <MenuPressedDelegate>
+
+NSInteger const slideRightBuffer = 300;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -108,7 +110,7 @@
     __weak BurgerContainerController *weakSelf = self;
     
     [UIView animateWithDuration:.3 animations:^{
-        weakSelf.topViewController.view.center =CGPointMake(weakSelf.topViewController.view.center.x + 300, weakSelf.topViewController.view.center.y);
+        weakSelf.topViewController.view.center =CGPointMake(weakSelf.topViewController.view.center.x + slideRightBuffer, weakSelf.topViewController.view.center.y);
     }completion:^(BOOL finished) {
         [weakSelf.topViewController.view addGestureRecognizer:weakSelf.tapToClose];
     }];
@@ -120,6 +122,48 @@
     }
     return _searchVC;
 }
+
+-(ProfileViewController *)profileVC {
+    if (!_profileVC) {
+        _profileVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PROFILE_VC"];
+    }
+    return _profileVC;
+}
+
+-(void)menuOptionSelected:(NSInteger)selectedRow {
+    NSLog(@"%ld",(long)selectedRow);
+    if (self.selectedRow == selectedRow) {
+        [self closePanel];
+    } else {
+        self.selectedRow = selectedRow;
+        UIViewController *destinationVC;
+        switch (selectedRow) {
+            case 0:
+                destinationVC = self.searchVC;
+                break;
+            case 1:
+                destinationVC = self.profileVC;
+                break;
+            case 2:
+                break;
+            default:
+                break;
+        }
+        [self switchToViewController:destinationVC];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"EMBED_MENU"]) {
+        MenuTableViewController *destinationVC = segue.destinationViewController;
+        destinationVC.delegate = self;
+        self.menuVC = destinationVC;
+        
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

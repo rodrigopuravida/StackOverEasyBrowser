@@ -20,7 +20,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gBi-iG-vzH">
                                 <rect key="frame" x="-1" y="0.0" width="600" height="600"/>
                                 <connections>
-                                    <segue destination="FHf-lS-aAo" kind="embed" id="vjC-qD-5WG"/>
+                                    <segue destination="FHf-lS-aAo" kind="embed" identifier="EMBED_MENU" id="vjC-qD-5WG"/>
                                 </connections>
                             </containerView>
                         </subviews>
