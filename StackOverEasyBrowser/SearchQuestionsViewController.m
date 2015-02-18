@@ -51,6 +51,7 @@
     cell.avatarImageView.image = nil;
     Question *question = self.questions[indexPath.row];
     cell.titleTextView.text = question.title;
+    //lazy loading of image
     if (!question.image) {
         [[StackOverflowService sharedService] fetchUserImage:question.avatarURL completionHandler:^(UIImage *image) {
             question.image = image;
