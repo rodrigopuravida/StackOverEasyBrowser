@@ -7,6 +7,8 @@
 //
 
 #import "BurgerContainerController.h"
+#import "ProfileViewController.h"
+#import "MenuTableTableViewController.h"
 
 @interface BurgerContainerController ()
 
@@ -15,8 +17,9 @@
 @property (strong,nonatomic) UIButton *burgerButton;
 @property (strong,nonatomic) UITapGestureRecognizer *tapToClose;
 @property (strong,nonatomic) UIPanGestureRecognizer *slideRecognizer;
-
-
+@property (strong, nonatomic) ProfileViewController *profileVC;
+@property (nonatomic) NSInteger selectedRow;
+@property (strong, nonatomic) MenuTableTableViewController *menuVC;
 
 @end
 

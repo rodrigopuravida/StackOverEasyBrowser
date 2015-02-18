@@ -190,5 +190,23 @@
             </objects>
             <point key="canvasLocation" x="437" y="131"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="t2o-fB-YFN">
+            <objects>
+                <viewController id="QJB-Gg-jn7" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3QG-EK-u3P"/>
+                        <viewControllerLayoutGuide type="bottom" id="2AV-FN-GdC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SpS-xT-eX2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.16078431904315948" green="0.89803928136825562" blue="0.18431372940540314" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djS-MW-U8U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="803"/>
+        </scene>
     </scenes>
 </document>

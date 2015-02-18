@@ -11,6 +11,7 @@
 		485B57761A93EB5600AFE40D /* StackOverflowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 485B57751A93EB5600AFE40D /* StackOverflowService.m */; };
 		485B57791A93ED5A00AFE40D /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 485B57781A93ED5A00AFE40D /* Question.m */; };
 		485B577F1A93F8E800AFE40D /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485B577E1A93F8E800AFE40D /* QuestionCell.m */; };
+		485B57821A953BC300AFE40D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485B57811A953BC300AFE40D /* ProfileViewController.m */; };
 		487C799D1A9293440018F3A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C799C1A9293440018F3A8 /* main.m */; };
 		487C79A01A9293440018F3A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C799F1A9293440018F3A8 /* AppDelegate.m */; };
 		487C79A31A9293440018F3A8 /* StackOverEasyBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 487C79A11A9293440018F3A8 /* StackOverEasyBrowser.xcdatamodeld */; };
@@ -45,6 +46,8 @@
 		485B57781A93ED5A00AFE40D /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		485B577D1A93F8E800AFE40D /* QuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionCell.h; path = ../QuestionCell.h; sourceTree = "<group>"; };
 		485B577E1A93F8E800AFE40D /* QuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionCell.m; path = ../QuestionCell.m; sourceTree = "<group>"; };
+		485B57801A953BC300AFE40D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		485B57811A953BC300AFE40D /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		487C79971A9293440018F3A8 /* StackOverEasyBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverEasyBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487C799B1A9293440018F3A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		487C799C1A9293440018F3A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				485B57781A93ED5A00AFE40D /* Question.m */,
 				487C79C51A9297840018F3A8 /* BurgerContainerController.h */,
 				487C79C61A9297840018F3A8 /* BurgerContainerController.m */,
+				485B57801A953BC300AFE40D /* ProfileViewController.h */,
+				485B57811A953BC300AFE40D /* ProfileViewController.m */,
 				487C79AA1A9293440018F3A8 /* Images.xcassets */,
 				48E46C221A92A66E007ED50A /* burger.png */,
 				487C79AC1A9293440018F3A8 /* LaunchScreen.xib */,
@@ -275,6 +280,7 @@
 				487C79A61A9293440018F3A8 /* ViewController.m in Sources */,
 				485B57791A93ED5A00AFE40D /* Question.m in Sources */,
 				487C799D1A9293440018F3A8 /* main.m in Sources */,
+				485B57821A953BC300AFE40D /* ProfileViewController.m in Sources */,
 				485B57761A93EB5600AFE40D /* StackOverflowService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
