@@ -14,5 +14,7 @@
 
 @property (strong,nonatomic) NSString *userId;
 @property (strong,nonatomic) NSString *userName;
+@property (strong, nonatomic) UIImage *profileImage;
+@property (strong, nonatomic) NSString *profileURL;
 
 @end

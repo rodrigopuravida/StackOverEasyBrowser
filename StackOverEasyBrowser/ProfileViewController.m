@@ -13,6 +13,7 @@
 @interface ProfileViewController () <UIScrollViewDelegate>
 @property (retain,nonatomic) UIScrollView *scrollView;
 @property (retain, nonatomic) NSArray *myProfileResults;
+@property (retain, nonatomic) IBOutlet UIImageView *profileImage;
 
 @end
 
@@ -40,8 +41,11 @@
             //display error
         }
         
+        //TODO: Add image to display
+        
         Profile *myProfile = results[0];
-   
+        
+           
         NSLog(@"%lu", (unsigned long)results.count);
         
         self.userId.text = [NSString stringWithFormat:@"%@",myProfile.userId];
@@ -67,6 +71,11 @@
 
 -(void)dealloc {
     [self.scrollView release];
+    [self.myProfileResults release];
+    [self.profileImage release];
+    [self.userId release];
+    [self.userName release];
+    
     [super dealloc];
 }
 

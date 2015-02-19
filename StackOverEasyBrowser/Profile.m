@@ -27,6 +27,7 @@
         Profile *profile = [[Profile alloc] init];
         profile.userId = item[@"user_id"];
         profile.userName = item[@"display_name"];
+        profile.profileURL = item[@"profile_image"];
         
         [temp addObject:profile];
     }

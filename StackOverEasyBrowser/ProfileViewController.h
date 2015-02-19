@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileViewController : UIViewController
-@property (assign, nonatomic) IBOutlet UILabel *userId;
-@property (assign, nonatomic) IBOutlet UILabel *userName;
+@property (retain, nonatomic) IBOutlet UILabel *userId;
+@property (retain, nonatomic) IBOutlet UILabel *userName;
 
 @end
