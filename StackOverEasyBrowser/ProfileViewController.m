@@ -29,10 +29,11 @@
     [self.view addSubview:self.scrollView];
     //self.scrollView.pagingEnabled = true;
     
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 1000, 100, 50)];
-    textField.backgroundColor = [UIColor blueColor];
-    [self.scrollView addSubview:textField];
-    [textField release];
+    //ascrolling test - don't need this
+//    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 1000, 100, 50)];
+//    textField.backgroundColor = [UIColor blueColor];
+//    [self.scrollView addSubview:textField];
+//    [textField release];
     self.scrollView.delegate = self;
     
     //loading of fetch profile info
