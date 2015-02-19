@@ -12,7 +12,7 @@
 
 @interface ProfileViewController () <UIScrollViewDelegate>
 @property (retain,nonatomic) UIScrollView *scrollView;
-@property (retain, nonatomic) NSArray *myProfile;
+@property (retain, nonatomic) NSArray *myProfileResults;
 
 @end
 
@@ -36,16 +36,18 @@
     
     //loading of fetch profile info
     [[StackOverflowService sharedService] fetchMyUserProfile:^(NSArray *results, NSString *error) {
-        self.myProfile = results[0];
-        
         if(error) {
             //display error
         }
         
-        Profile *myProfile = self.myProfile;
+        Profile *myProfile = results[0];
         
-        //self.userId.text = myProfile.userId;
+                
+        NSLog(@"%lu", (unsigned long)results.count);
+        
+        self.userId.text = [NSString stringWithFormat:@"%@",myProfile.userId];
         self.userName.text = myProfile.userName;
+
         NSLog(@"The End");
         
 
