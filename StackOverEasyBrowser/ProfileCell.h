@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *userId;
+//@property (weak, nonatomic) IBOutlet UILabel *userId;
 
-@property (weak, nonatomic) IBOutlet UILabel *userName;
+//@property (weak, nonatomic) IBOutlet UILabel *userName;
 
 @end

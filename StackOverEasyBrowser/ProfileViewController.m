@@ -8,11 +8,10 @@
 
 #import "ProfileViewController.h"
 #import "StackOverflowService.h"
-#import "ProfileCell.h"
+#import "Profile.h"
 
-@interface ProfileViewController () <UIScrollViewDelegate, UITableViewDataSource>
+@interface ProfileViewController () <UIScrollViewDelegate>
 @property (retain,nonatomic) UIScrollView *scrollView;
-@property (retain, nonatomic) IBOutlet UITableView *tableView;
 @property (retain, nonatomic) NSArray *myProfile;
 
 @end
@@ -37,11 +36,19 @@
     
     //loading of fetch profile info
     [[StackOverflowService sharedService] fetchMyUserProfile:^(NSArray *results, NSString *error) {
-        self.myProfile = results;
+        self.myProfile = results[0];
+        
         if(error) {
-            //display something for error
+            //display error
         }
-        [self.tableView reloadData];
+        
+        Profile *myProfile = self.myProfile;
+        
+        //self.userId.text = myProfile.userId;
+        self.userName.text = myProfile.userName;
+        NSLog(@"The End");
+        
+
     }];
     
     
@@ -52,15 +59,22 @@
     NSLog(@"x:%f y:%f",scrollView.contentOffset.x,scrollView.contentOffset.y);
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PROFILE_CEL"
-                                                         forIndexPath:indexPath];
-        return cell;
-}
+//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//    return self.myProfile.count;
+//}
+//
+//-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    ProfileViewController *cell = [tableView dequeueReusableCellWithIdentifier:@"PROFILE_CEL"
+//                                                         forIndexPath:indexPath];
+//    
+//    Profile *myProfile = self.myProfile[indexPath.row];
+//    cell.userId.text = myProfile.userId;
+//    NSLog(@"%@", myProfile.userId);
+//    cell.userName.text = myProfile.userName;
+//    NSLog(@"%@", myProfile.userName);
+//    
+//        return cell;
+//}
 
 
 - (void)didReceiveMemoryWarning {
