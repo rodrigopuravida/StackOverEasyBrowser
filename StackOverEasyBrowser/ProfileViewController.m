@@ -7,11 +7,13 @@
 //
 
 #import "ProfileViewController.h"
+#import "StackOverflowService.h"
 #import "ProfileCell.h"
 
 @interface ProfileViewController () <UIScrollViewDelegate, UITableViewDataSource>
 @property (retain,nonatomic) UIScrollView *scrollView;
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
+@property (retain, nonatomic) NSArray *myProfile;
 
 @end
 
@@ -32,6 +34,15 @@
     [self.scrollView addSubview:textField];
     [textField release];
     self.scrollView.delegate = self;
+    
+    //loading of fetch profile info
+    [[StackOverflowService sharedService] fetchMyUserProfile:^(NSArray *results, NSString *error) {
+        self.myProfile = results;
+        if(error) {
+            //display something for error
+        }
+        [self.tableView reloadData];
+    }];
     
     
     // Do any additional setup after loading the view.

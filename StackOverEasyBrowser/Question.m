@@ -30,6 +30,7 @@
         question.title = item[@"title"];
         NSDictionary *userInfo = item[@"owner"];
         question.avatarURL = userInfo[@"profile_image"];
+        question.userId = userInfo[@"user_id"];
         
         [temp addObject:question];
     }
