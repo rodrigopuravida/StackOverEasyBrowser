@@ -41,8 +41,7 @@
         }
         
         Profile *myProfile = results[0];
-        
-                
+   
         NSLog(@"%lu", (unsigned long)results.count);
         
         self.userId.text = [NSString stringWithFormat:@"%@",myProfile.userId];
@@ -50,7 +49,6 @@
 
         NSLog(@"The End");
         
-
     }];
     
     
@@ -60,23 +58,6 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"x:%f y:%f",scrollView.contentOffset.x,scrollView.contentOffset.y);
 }
-
-//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.myProfile.count;
-//}
-//
-//-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    ProfileViewController *cell = [tableView dequeueReusableCellWithIdentifier:@"PROFILE_CEL"
-//                                                         forIndexPath:indexPath];
-//    
-//    Profile *myProfile = self.myProfile[indexPath.row];
-//    cell.userId.text = myProfile.userId;
-//    NSLog(@"%@", myProfile.userId);
-//    cell.userName.text = myProfile.userName;
-//    NSLog(@"%@", myProfile.userName);
-//    
-//        return cell;
-//}
 
 
 - (void)didReceiveMemoryWarning {
