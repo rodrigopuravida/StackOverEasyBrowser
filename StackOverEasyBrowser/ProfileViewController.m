@@ -24,16 +24,9 @@
     
     self.scrollView = [[UIScrollView alloc]
                        initWithFrame:self.view.frame];
-    //self.scrollView.backgroundColor = [UIColor blueColor];
     self.scrollView.contentSize = CGSizeMake(2000, 2000);
     [self.view addSubview:self.scrollView];
-    //self.scrollView.pagingEnabled = true;
-    
-    //ascrolling test - don't need this
-//    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 1000, 100, 50)];
-//    textField.backgroundColor = [UIColor blueColor];
-//    [self.scrollView addSubview:textField];
-//    [textField release];
+
     self.scrollView.delegate = self;
     
     //loading of fetch profile info
@@ -45,8 +38,7 @@
         //TODO: Add image to display
         
         Profile *myProfile = results[0];
-        
-           
+
         NSLog(@"%lu", (unsigned long)results.count);
         
         self.userId.text = [NSString stringWithFormat:@"%@",myProfile.userId];
