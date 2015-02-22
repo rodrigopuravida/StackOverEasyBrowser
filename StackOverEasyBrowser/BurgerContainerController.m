@@ -9,6 +9,7 @@
 #import "BurgerContainerController.h"
 #import "ProfileViewController.h"
 #import "MenuTableTableViewController.h"
+@import UIKit;
 
 @interface BurgerContainerController () <MenuPressedDelegate>
 
@@ -174,6 +175,7 @@ NSInteger const slideRightBuffer = 300;
                 destinationVC = self.profileVC;
                 break;
             case 2:
+                NSLog(@"No existing questions");
                 break;
             default:
                 break;
@@ -191,8 +193,6 @@ NSInteger const slideRightBuffer = 300;
         
     }
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
